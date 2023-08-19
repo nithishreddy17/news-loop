@@ -17,7 +17,13 @@ import java.util.Objects;
 @SpringBootApplication
 public class NewsApplication {
 
-	public static void main(String[] args) throws IOException {
+	// For Heroku
+	public static void main(String[] args) {
+		SpringApplication.run(NewsApplication.class, args);
+	}
+
+	// for running the app on Firebase - uncomment the below block
+	/*public static void main(String[] args) throws IOException {
 		ClassLoader classLoader = NewsApplication.class.getClassLoader();
 
 		File file = new File(Objects.requireNonNull(classLoader.getResource("serviceAccountKey.json")).getFile());
@@ -44,5 +50,6 @@ public class NewsApplication {
 
 		SpringApplication.run(NewsApplication.class, args);
 	}
+	**/
 
 }
