@@ -1,0 +1,572 @@
+[
+  {
+    "commentId": 1,
+    "newsArticleId": 101,
+    "author": {
+      "userId": 1,
+      "avatarUrl": "https://example.com/user1_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user1_profilepic.jpg",
+      "userName": "user1",
+      "emailAddress": "user1@example.com"
+    },
+    "text": "This article is great!",
+    "commentedOn": "2023-08-20T14:30:00Z",
+    "reactions": {
+      "like": 10,
+      "love": 5,
+      "sad": 2,
+      "angry": 1
+    }
+  },
+  {
+    "commentId": 2,
+    "newsArticleId": 101,
+    "author": {
+      "userId": 2,
+      "avatarUrl": "https://example.com/user2_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user2_profilepic.jpg",
+      "userName": "user2",
+      "emailAddress": "user2@example.com"
+    },
+    "text": "I agree with user1!",
+    "commentedOn": "2023-08-20T14:35:00Z",
+    "reactions": {
+      "like": 8,
+      "love": 4,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 3,
+    "newsArticleId": 101,
+    "author": {
+      "userId": 3,
+      "avatarUrl": "https://example.com/user3_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user3_profilepic.jpg",
+      "userName": "user3",
+      "emailAddress": "user3@example.com"
+    },
+    "text": "This article needs more details.",
+    "commentedOn": "2023-08-20T14:40:00Z",
+    "reactions": {
+      "like": 6,
+      "love": 2,
+      "sad": 3,
+      "angry": 1
+    }
+  },
+  {
+    "commentId": 4,
+    "newsArticleId": 101,
+    "author": {
+      "userId": 4,
+      "avatarUrl": "https://example.com/user4_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user4_profilepic.jpg",
+      "userName": "user4",
+      "emailAddress": "user4@example.com"
+    },
+    "text": "Interesting read!",
+    "commentedOn": "2023-08-20T14:45:00Z",
+    "reactions": {
+      "like": 12,
+      "love": 3,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 5,
+    "newsArticleId": 101,
+    "author": {
+      "userId": 5,
+      "avatarUrl": "https://example.com/user5_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user5_profilepic.jpg",
+      "userName": "user5",
+      "emailAddress": "user5@example.com"
+    },
+    "text": "I couldn't agree more!",
+    "commentedOn": "2023-08-20T14:50:00Z",
+    "reactions": {
+      "like": 15,
+      "love": 6,
+      "sad": 1,
+      "angry": 2
+    }
+  },
+  {
+    "commentId": 6,
+    "newsArticleId": 102,
+    "author": {
+      "userId": 6,
+      "avatarUrl": "https://example.com/user6_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user6_profilepic.jpg",
+      "userName": "user6",
+      "emailAddress": "user6@example.com"
+    },
+    "text": "Thanks for sharing this!",
+    "commentedOn": "2023-08-20T15:00:00Z",
+    "reactions": {
+      "like": 8,
+      "love": 3,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 7,
+    "newsArticleId": 102,
+    "author": {
+      "userId": 7,
+      "avatarUrl": "https://example.com/user7_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user7_profilepic.jpg",
+      "userName": "user7",
+      "emailAddress": "user7@example.com"
+    },
+    "text": "This is interesting!",
+    "commentedOn": "2023-08-20T15:05:00Z",
+    "reactions": {
+      "like": 6,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 8,
+    "newsArticleId": 102,
+    "author": {
+      "userId": 8,
+      "avatarUrl": "https://example.com/user8_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user8_profilepic.jpg",
+      "userName": "user8",
+      "emailAddress": "user8@example.com"
+    },
+    "text": "I learned something new today.",
+    "commentedOn": "2023-08-20T15:10:00Z",
+    "reactions": {
+      "like": 9,
+      "love": 4,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 9,
+    "newsArticleId": 102,
+    "author": {
+      "userId": 9,
+      "avatarUrl": "https://example.com/user9_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user9_profilepic.jpg",
+      "userName": "user9",
+      "emailAddress": "user9@example.com"
+    },
+    "text": "I have a different opinion.",
+    "commentedOn": "2023-08-20T15:15:00Z",
+    "reactions": {
+      "like": 5,
+      "love": 1,
+      "sad": 3,
+      "angry": 2
+    }
+  },
+  {
+    "commentId": 10,
+    "newsArticleId": 102,
+    "author": {
+      "userId": 10,
+      "avatarUrl": "https://example.com/user10_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user10_profilepic.jpg",
+      "userName": "user10",
+      "emailAddress": "user10@example.com"
+    },
+    "text": "Can you provide more details?",
+    "commentedOn": "2023-08-20T15:20:00Z",
+    "reactions": {
+      "like": 7,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 11,
+    "newsArticleId": 103,
+    "author": {
+      "userId": 11,
+      "avatarUrl": "https://example.com/user11_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user11_profilepic.jpg",
+      "userName": "user11",
+      "emailAddress": "user11@example.com"
+    },
+    "text": "I found this article useful!",
+    "commentedOn": "2023-08-20T15:30:00Z",
+    "reactions": {
+      "like": 11,
+      "love": 4,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 12,
+    "newsArticleId": 103,
+    "author": {
+      "userId": 12,
+      "avatarUrl": "https://example.com/user12_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user12_profilepic.jpg",
+      "userName": "user12",
+      "emailAddress": "user12@example.com"
+    },
+    "text": "Great article!",
+    "commentedOn": "2023-08-20T15:35:00Z",
+    "reactions": {
+      "like": 9,
+      "love": 3,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 13,
+    "newsArticleId": 103,
+    "author": {
+      "userId": 13,
+      "avatarUrl": "https://example.com/user13_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user13_profilepic.jpg",
+      "userName": "user13",
+      "emailAddress": "user13@example.com"
+    },
+    "text": "I have a question.",
+    "commentedOn": "2023-08-20T15:40:00Z",
+    "reactions": {
+      "like": 6,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 14,
+    "newsArticleId": 103,
+    "author": {
+      "userId": 14,
+      "avatarUrl": "https://example.com/user14_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user14_profilepic.jpg",
+      "userName": "user14",
+      "emailAddress": "user14@example.com"
+    },
+    "text": "I completely agree with user11!",
+    "commentedOn": "2023-08-20T15:45:00Z",
+    "reactions": {
+      "like": 10,
+      "love": 4,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 15,
+    "newsArticleId": 104,
+    "author": {
+      "userId": 15,
+      "avatarUrl": "https://example.com/user15_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user15_profilepic.jpg",
+      "userName": "user15",
+      "emailAddress": "user15@example.com"
+    },
+    "text": "Well written!",
+    "commentedOn": "2023-08-20T15:55:00Z",
+    "reactions": {
+      "like": 7,
+      "love": 2,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 16,
+    "newsArticleId": 104,
+    "author": {
+      "userId": 16,
+      "avatarUrl": "https://example.com/user16_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user16_profilepic.jpg",
+      "userName": "user16",
+      "emailAddress": "user16@example.com"
+    },
+    "text": "I had a similar experience.",
+    "commentedOn": "2023-08-20T16:00:00Z",
+    "reactions": {
+      "like": 8,
+      "love": 3,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 17,
+    "newsArticleId": 104,
+    "author": {
+      "userId": 17,
+      "avatarUrl": "https://example.com/user17_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user17_profilepic.jpg",
+      "userName": "user17",
+      "emailAddress": "user17@example.com"
+    },
+    "text": "I appreciate the insights.",
+    "commentedOn": "2023-08-20T16:05:00Z",
+    "reactions": {
+      "like": 7,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 18,
+    "newsArticleId": 104,
+    "author": {
+      "userId": 18,
+      "avatarUrl": "https://example.com/user18_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user18_profilepic.jpg",
+      "userName": "user18",
+      "emailAddress": "user18@example.com"
+    },
+    "text": "I have a question about the third paragraph.",
+    "commentedOn": "2023-08-20T16:10:00Z",
+    "reactions": {
+      "like": 5,
+      "love": 1,
+      "sad": 2,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 19,
+    "newsArticleId": 104,
+    "author": {
+      "userId": 19,
+      "avatarUrl": "https://example.com/user19_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user19_profilepic.jpg",
+      "userName": "user19",
+      "emailAddress": "user19@example.com"
+    },
+    "text": "I found the conclusion inspiring.",
+    "commentedOn": "2023-08-20T16:15:00Z",
+    "reactions": {
+      "like": 10,
+      "love": 4,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 20,
+    "newsArticleId": 105,
+    "author": {
+      "userId": 20,
+      "avatarUrl": "https://example.com/user20_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user20_profilepic.jpg",
+      "userName": "user20",
+      "emailAddress": "user20@example.com"
+    },
+    "text": "I couldn't agree more!",
+    "commentedOn": "2023-08-20T16:25:00Z",
+    "reactions": {
+      "like": 12,
+      "love": 5,
+      "sad": 1,
+      "angry": 2
+    }
+  },
+  {
+    "commentId": 21,
+    "newsArticleId": 105,
+    "author": {
+      "userId": 21,
+      "avatarUrl": "https://example.com/user21_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user21_profilepic.jpg",
+      "userName": "user21",
+      "emailAddress": "user21@example.com"
+    },
+    "text": "This is a thought-provoking article.",
+    "commentedOn": "2023-08-20T16:30:00Z",
+    "reactions": {
+      "like": 9,
+      "love": 3,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 22,
+    "newsArticleId": 105,
+    "author": {
+      "userId": 22,
+      "avatarUrl": "https://example.com/user22_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user22_profilepic.jpg",
+      "userName": "user22",
+      "emailAddress": "user22@example.com"
+    },
+    "text": "I have a question about the second paragraph.",
+    "commentedOn": "2023-08-20T16:35:00Z",
+    "reactions": {
+      "like": 6,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 23,
+    "newsArticleId": 105,
+    "author": {
+      "userId": 23,
+      "avatarUrl": "https://example.com/user23_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user23_profilepic.jpg",
+      "userName": "user23",
+      "emailAddress": "user23@example.com"
+    },
+    "text": "I appreciate the insights shared in this article.",
+    "commentedOn": "2023-08-20T16:40:00Z",
+    "reactions": {
+      "like": 7,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 24,
+    "newsArticleId": 105,
+    "author": {
+      "userId": 24,
+      "avatarUrl": "https://example.com/user24_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user24_profilepic.jpg",
+      "userName": "user24",
+      "emailAddress": "user24@example.com"
+    },
+    "text": "I found this article enlightening.",
+    "commentedOn": "2023-08-20T16:45:00Z",
+    "reactions": {
+      "like": 10,
+      "love": 4,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 25,
+    "newsArticleId": 106,
+    "author": {
+      "userId": 25,
+      "avatarUrl": "https://example.com/user25_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user25_profilepic.jpg",
+      "userName": "user25",
+      "emailAddress": "user25@example.com"
+    },
+    "text": "Great article!",
+    "commentedOn": "2023-08-20T16:55:00Z",
+    "reactions": {
+      "like": 8,
+      "love": 3,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 26,
+    "newsArticleId": 106,
+    "author": {
+      "userId": 26,
+      "avatarUrl": "https://example.com/user26_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user26_profilepic.jpg",
+      "userName": "user26",
+      "emailAddress": "user26@example.com"
+    },
+    "text": "I had a similar experience.",
+    "commentedOn": "2023-08-20T17:00:00Z",
+    "reactions": {
+      "like": 7,
+      "love": 2,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 27,
+    "newsArticleId": 106,
+    "author": {
+      "userId": 27,
+      "avatarUrl": "https://example.com/user27_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user27_profilepic.jpg",
+      "userName": "user27",
+      "emailAddress": "user27@example.com"
+    },
+    "text": "I appreciate the insights shared in this article.",
+    "commentedOn": "2023-08-20T17:05:00Z",
+    "reactions": {
+      "like": 6,
+      "love": 2,
+      "sad": 1,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 28,
+    "newsArticleId": 106,
+    "author": {
+      "userId": 28,
+      "avatarUrl": "https://example.com/user28_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user28_profilepic.jpg",
+      "userName": "user28",
+      "emailAddress": "user28@example.com"
+    },
+    "text": "I have a question about the third paragraph.",
+    "commentedOn": "2023-08-20T17:10:00Z",
+    "reactions": {
+      "like": 5,
+      "love": 1,
+      "sad": 2,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 29,
+    "newsArticleId": 106,
+    "author": {
+      "userId": 29,
+      "avatarUrl": "https://example.com/user29_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user29_profilepic.jpg",
+      "userName": "user29",
+      "emailAddress": "user29@example.com"
+    },
+    "text": "I found the conclusion inspiring.",
+    "commentedOn": "2023-08-20T17:15:00Z",
+    "reactions": {
+      "like": 9,
+      "love": 4,
+      "sad": 0,
+      "angry": 0
+    }
+  },
+  {
+    "commentId": 30,
+    "newsArticleId": 106,
+    "author": {
+      "userId": 30,
+      "avatarUrl": "https://example.com/user30_avatar.jpg",
+      "userProfilePicUrl": "https://example.com/user30_profilepic.jpg",
+      "userName": "user30",
+      "emailAddress": "user30@example.com"
+    },
+    "text": "I couldn't agree more!",
+    "commentedOn": "2023-08-20T17:20:00Z",
+    "reactions": {
+      "like": 12,
+      "love": 5,
+      "sad": 1,
+      "angry": 2
+    }
+  }
+]
