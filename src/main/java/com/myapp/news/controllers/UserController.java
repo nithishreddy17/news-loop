@@ -44,6 +44,7 @@ public class UserController {
             @Content(mediaType = "application/json", schema = @Schema(implementation = List.class, type = "User"))
     })
     @ApiResponse(responseCode = "403", description = "Insufficient privileges")
+    @ApiResponse(responseCode = "404", description = "User not found")
     public ResponseEntity<List<User>> getAllUsers() {
         return ResponseEntity.ok(userList);
     }
@@ -101,7 +102,6 @@ public class UserController {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "User deleted"),
             @ApiResponse(responseCode = "404", description = "User not found"),
-            @ApiResponse(responseCode = "400", description = "Invalid user object"),
             @ApiResponse(responseCode = "403", description = "Insufficient privileges")
     })
     public ResponseEntity<Void> deleteUser(@PathVariable long userId) {
