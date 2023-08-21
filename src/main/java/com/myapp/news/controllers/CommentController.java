@@ -26,6 +26,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import static com.myapp.news.utils.CommentJsonFileHandler.filterCommentsByArticleId;
+
 @RestController
 @RequestMapping("/api/comments")
 public class CommentController {
@@ -44,35 +46,34 @@ public class CommentController {
         this.commentsFilePath = commentsFilePath;
     }
 
-    @GetMapping("/getCommentsByNewsId/{newsArticleId}")
-    @Operation(summary = "Get comments by News Article ID", description = "Retrieve comments by the ID of the associated news article.")
+    @GetMapping("/{commentId}")
+    @Operation(summary = "Get a comment by Comment ID", description = "Retrieve a comment by its unique Comment ID.")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Comments found", content = {
-                    @Content(mediaType = "application/json", schema = @Schema(implementation = Page.class))
+            @ApiResponse(responseCode = "200", description = "Comment found", content = {
+                    @Content(mediaType = "application/json", schema = @Schema(implementation = Comment.class))
             }),
-            @ApiResponse(responseCode = "404", description = "Comments not found")
+            @ApiResponse(responseCode = "404", description = "Comment not found")
     })
-    public ResponseEntity<Page<Comment>> getCommentsByArticleId(
-            @PathVariable long newsArticleId,
-            @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "3") int size,
-            @RequestParam(defaultValue = "commentedOn") String sortBy,
+    public ResponseEntity<Comment> getCommentByCommentId(
+            @PathVariable long commentId,
             @RequestHeader(name = "Accept-Version", required = false) String apiVersion) throws IOException {
 
-        // Read the comments from the local JSON file
-        List<Comment> comments = readCommentsFromJsonFile();
-        List<Comment> filteredComments = filterCommentsByArticleId(comments, newsArticleId);
-        // Create a PageRequest for pagination and sorting
-        PageRequest pageRequest = PageRequest.of(page - 1, size);
-        filteredComments.sort((c1, c2) -> c2.getCommentedOn().compareTo(c1.getCommentedOn()));
+        // Read the comments from the local JSON file or your data source
+        List<Comment> comments = jsonFileHandler.readCommentsFromJsonFile();
 
-        // Create a Page object with the specified page, size, and sorted comments
-        int start = (int) pageRequest.getOffset();
-        int end = Math.min((start + pageRequest.getPageSize()), filteredComments.size());
-        Page<Comment> commentPage = new PageImpl<>(filteredComments.subList(start, end), pageRequest, filteredComments.size());
+        // Find the comment with the specified commentId
+        Optional<Comment> foundComment = comments.stream()
+                .filter(comment -> comment.getCommentId() == commentId)
+                .findFirst();
 
-        return ResponseEntity.ok(commentPage);
+        // If the comment is found, return it; otherwise, return a 404 response
+        if (foundComment.isPresent()) {
+            return ResponseEntity.ok(foundComment.get());
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
+
 
     @PostMapping
     @Operation(summary = "Create a new comment", description = "Create a new comment associated with a news article.")
@@ -94,7 +95,7 @@ public class CommentController {
         }
     }
 
-    @PutMapping("/updateComment/{commentId}")
+    @PutMapping("/{commentId}")
     @Operation(summary = "Update an existing comment", description = "Update an existing comment by its ID.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Comment updated", content = {
@@ -128,7 +129,7 @@ public class CommentController {
         }
     }
 
-    @DeleteMapping("/deleteComment/{commentId}")
+    @DeleteMapping("/{commentId}")
     @Operation(summary = "Delete a comment by ID", description = "Delete a comment by its ID.")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "204", description = "Comment deleted"),
@@ -157,16 +158,6 @@ public class CommentController {
         }
     }
 
-    private List<Comment> readCommentsFromJsonFile() throws IOException {
-        Resource resource = new ClassPathResource(commentsFilePath);
-        return objectMapper.readValue(resource.getInputStream(), new TypeReference<List<Comment>>() {});
-    }
-
-    private List<Comment> filterCommentsByArticleId(List<Comment> comments, long newsArticleId) {
-        return comments.stream()
-                .filter(comment -> comment.getNewsArticleId() == newsArticleId)
-                .collect(Collectors.toList());
-    }
 
     @ExceptionHandler(IOException.class)
     public ResponseEntity<String> handleIOException(IOException e) {
